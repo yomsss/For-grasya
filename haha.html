@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bossing mahal talaga kita sensya na </title>
+
+  <link rel="stylesheet" href="./css2.css" />
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: #b383a7;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* Needed for the random-position images */
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      /* Keeps the main content above the extra images */
+      position: relative;
+      z-index: 10;
+    }
+
+    /* GIF */
+	.container img.main-gif {
+	  width: 300px;
+	  height: auto;
+	  display: block;
+	  transform: rotate(0deg);
+	  margin: 80px 0;
+	}
+
+    /* Text */
+    h1 {
+      margin: -75px 0 0;
+      font-size: 32px;
+      text-align: center;
+    }
+
+    p {
+      margin: 4px 0 0;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    /* Yes button */
+    .btn {
+      margin-top: 45px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn a {
+      background-color: white;
+      color: black;
+      text-decoration: none;
+
+      padding: 12px 30px;
+      border-radius: 25px;
+
+      font-size: 18px;
+    }
+
+    .btn a:hover {
+      background-color: #eeeeee;
+    }
+
+    /* Extra images */
+    .extra-img {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      z-index: 1;
+    }
+
+		/* Image 1 */
+	.img1 {
+	  width: 180px;
+	  height: 180px;
+	  top: 2%;
+	  left: 15%;
+	  transform: rotate(-14deg);
+	}
+
+	/* Image 2 */
+	.img2 {
+	  width: 280px;
+	  height: 280px;
+	  top: 4%;
+	  right: 8%;
+	  transform: rotate(11deg);
+	}
+
+	/* Image 3 */
+	.img3 {
+	  width: 230px;
+	  height: 230px;
+	  bottom: 3%;
+	  left: 5%;
+	  transform: rotate(17deg);
+	}
+
+	/* Image 4 */
+	.img4 {
+	  width: 320px;
+	  height: 320px;
+	  bottom: 8%;
+	  right: 5%;
+	  transform: rotate(-12deg);
+	}
+
+	/* Image 5 */
+	.img5 {
+	  width: 150px;
+	  height: 150px;
+	  top: 43%;
+	  left: 8%;
+	  transform: rotate(-7deg);
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 5 extra images -->
+  <img class="extra-img img1" src="C:\Users\portu\Downloads\html's\gif's\kulitan2.jpg" alt="Image 1">
+  <img class="extra-img img2" src="C:\Users\portu\Downloads\html's\gif's\wholesome1.jpg"alt="Image 2">
+  <img class="extra-img img3" src="C:\Users\portu\Downloads\html's\gif's\kulitan3.jpg" alt="Image 3">
+  <img class="extra-img img4" src="C:\Users\portu\Downloads\html's\gif's\kulitan1.jpg" alt="Image 4">
+  <img class="extra-img img5" src="C:\Users\portu\Downloads\html's\gif's\kulitan3.jpg" alt="Image 5">
+
+
+  <!-- Main content -->
+  <div class="container">
+
+    <img class="main-gif"
+      src="C:\Users\portu\Downloads\html's\gif's\gif6.gif"
+      alt="GIF">
+
+    <h1>Part of my life na kasamaa kita.</h1>
+
+    <p>mahal na mahal kita.</p>
+
+    <div class="btn">
+      <a href="new 1.html">...</a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

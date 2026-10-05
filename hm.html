@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gosh:<< </title>
+
+  <link rel="stylesheet" href="./css.css" />
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: #b383a7;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* Needed for the random-position images */
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      /* Keeps the main content above the extra images */
+      position: relative;
+      z-index: 10;
+    }
+
+    /* GIF */
+    .container img.main-gif {
+      width: 300px;
+      height: auto;
+      display: block;
+    }
+
+    /* Text */
+    h1 {
+      margin: 10px 0 0;
+      font-size: 32px;
+      text-align: center;
+    }
+
+    p {
+      margin: 4px 0 0;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    /* Yes button */
+    .btn {
+      margin-top: 45px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn a {
+      background-color: white;
+      color: black;
+      text-decoration: none;
+
+      padding: 12px 30px;
+      border-radius: 25px;
+
+      font-size: 18px;
+    }
+
+    .btn a:hover {
+      background-color: #eeeeee;
+    }
+
+		/* Extra images */
+	.extra-img {
+	  position: absolute;
+	  object-fit: cover;
+	  border-radius: 15px;
+	  z-index: 1;
+	}
+
+	/* Image 1 */
+	.img1 {
+	  width: 220px;
+	  height: 220px;
+	  top: 5%;
+	  left: 5%;
+	  transform: rotate(-10deg);
+	}
+
+	/* Image 2 */
+	.img2 {
+	  width: 330px;
+	  height: 330px;
+	  top: 3%;
+	  right: 4%;
+	  transform: rotate(8deg);
+	}
+
+	/* Image 3 */
+	.img3 {
+	  width: 280px;
+	  height: 280px;
+	  bottom: 5%;
+	  left: 7%;
+	  transform: rotate(12deg);
+	}
+
+	/* Image 4 */
+	.img4 {
+	  width: 310px;
+	  height: 310px;
+	  bottom: 4%;
+	  right: 6%;
+	  transform: rotate(-8deg);
+	}
+
+	/* Image 5 */
+	.img5 {
+	  width: 190px;
+	  height: 190px;
+	  top: 45%;
+	  left: 2%;
+	  transform: rotate(-5deg);
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- 5 extra images -->
+  <img class="extra-img img1" src="C:\Users\portu\Downloads\html's\gif's\gif9.gif" alt="Image 1">
+  <img class="extra-img img2" src="C:\Users\portu\Downloads\html's\gif's\me2.jpg"alt="Image 2">
+  <img class="extra-img img3" src="C:\Users\portu\Downloads\html's\gif's\me1.jpg" alt="Image 3">
+  <img class="extra-img img4" src="C:\Users\portu\Downloads\html's\gif's\gif8.gif" alt="Image 4">
+  <img class="extra-img img5" src="C:\Users\portu\Downloads\html's\gif's\gift.jpg" alt="Image 5">
+
+
+  <!-- Main content -->
+  <div class="container">
+
+    <img class="main-gif"
+      src="C:\Users\portu\Downloads\html's\gif's\ganda1.jpg"
+      alt="GIF">
+
+    <h1>hahaha</h1>
+
+    <p> well I guess there's not much too say hahaahah. As you can nmn siguro from the images,<br>
+	I have expressed all of my feelings(all out kung tawagin ng iba.)</p>
+
+    <div class="btn">
+      <a href="yea.html">yea...</a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
