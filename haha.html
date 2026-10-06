@@ -18,7 +18,6 @@
       justify-content: center;
       align-items: center;
 
-      /* Needed for the random-position images */
       position: relative;
       overflow: hidden;
     }
@@ -32,12 +31,10 @@
       align-items: center;
       text-align: center;
 
-      /* Keeps the main content above the extra images */
       position: relative;
       z-index: 10;
     }
 
-    /* GIF */
 	.container img.main-gif {
 	  width: 300px;
 	  height: auto;
@@ -46,7 +43,6 @@
 	  margin: 80px 0;
 	}
 
-    /* Text */
     h1 {
       margin: -75px 0 0;
       font-size: 32px;
@@ -59,7 +55,6 @@
       text-align: center;
     }
 
-    /* Yes button */
     .btn {
       margin-top: 45px;
       display: flex;
@@ -81,7 +76,6 @@
       background-color: #eeeeee;
     }
 
-    /* Extra images */
     .extra-img {
       position: absolute;
       width: 200px;
@@ -91,7 +85,6 @@
       z-index: 1;
     }
 
-		/* Image 1 */
 	.img1 {
 	  width: 180px;
 	  height: 180px;
@@ -100,7 +93,6 @@
 	  transform: rotate(-14deg);
 	}
 
-	/* Image 2 */
 	.img2 {
 	  width: 280px;
 	  height: 280px;
@@ -109,7 +101,6 @@
 	  transform: rotate(11deg);
 	}
 
-	/* Image 3 */
 	.img3 {
 	  width: 230px;
 	  height: 230px;
@@ -118,7 +109,6 @@
 	  transform: rotate(17deg);
 	}
 
-	/* Image 4 */
 	.img4 {
 	  width: 320px;
 	  height: 320px;
@@ -127,7 +117,6 @@
 	  transform: rotate(-12deg);
 	}
 
-	/* Image 5 */
 	.img5 {
 	  width: 150px;
 	  height: 150px;
@@ -141,15 +130,12 @@
 
 <body>
 
-  <!-- 5 extra images -->
   <img class="extra-img img1" src="kulitan2.jpg" alt="Image 1">
   <img class="extra-img img2" src="wholesome1.jpg"alt="Image 2">
   <img class="extra-img img3" src="kulitan3.jpg" alt="Image 3">
   <img class="extra-img img4" src="kulitan1.jpg" alt="Image 4">
   <img class="extra-img img5" src="wholesome2.jpg" alt="Image 5">
 
-
-  <!-- Main content -->
   <div class="container">
 
     <img class="main-gif"
