@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bossing mahal talaga kita sensya na</title>
+  <title>Bossing mahal talaga kita sensya na </title>
 
   <link rel="stylesheet" href="./css2.css" />
 
@@ -13,12 +12,7 @@
     body {
       margin: 0;
       min-height: 100vh;
-
-      background-image: url("gif7.gif");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-color: #b383a7;
 
       display: flex;
       justify-content: center;
@@ -26,14 +20,6 @@
 
       position: relative;
       overflow: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(179, 131, 167, 0.45);
-      z-index: 0;
     }
 
     .container {
@@ -47,12 +33,18 @@
 
       position: relative;
       z-index: 10;
-
-      padding: 30px;
     }
 
+	.container img.main-gif {
+	  width: 300px;
+	  height: auto;
+	  display: block;
+	  transform: rotate(-90deg);
+	  margin: 80px 0;
+	}
+
     h1 {
-      margin: 0 0 15px;
+      margin: -185px 0 0;
       font-size: 32px;
       text-align: center;
     }
@@ -61,7 +53,6 @@
       margin: 4px 0 0;
       font-size: 18px;
       text-align: center;
-      line-height: 1.6;
     }
 
     .btn {
@@ -84,6 +75,8 @@
     .btn a:hover {
       background-color: #eeeeee;
     }
+
+
   </style>
 </head>
 
@@ -91,24 +84,28 @@
 
   <div class="container">
 
+    <img class="main-gif"
+      src="gif7.gif"
+      alt="GIF">
+
     <h1>nothing nada?.</h1>
 
-    <p>
-      For the sake of my own sanity, I have chosen to let things be, as though nothing had ever shifted,
-      and all may simply be as it once was.<br>
+<p>
+  For the sake of my own sanity, I have chosen to let things be, as though nothing had ever shifted,
+  and all may simply be as it once was.<br>
 
-      Perhaps, it is better this way... to let everything settle into its place and carry on without
-      making a matter out of it.<br>
+  Perhaps, it is better this way... to let everything settle into its place and carry on without
+  making a matter out of it.<br>
 
-      Whatever little oddities may have crossed my mind, I think I shall leave them be for now.
-      There is no need to make a fuss over something that may amount to nothing at all.<br>
+  Whatever little oddities may have crossed my mind, I think I shall leave them be for now.
+  There is no need to make a fuss over something that may amount to nothing at all.<br>
 
-      So, I let things be, even if a part of me knows they no longer are. Though perhaps I am only
-      pretending that they do, even if my heart still wants you.<br>
+  So, I let things be, even if a part of me knows they no longer are. Though perhaps I am only
+  pretending that they do, even if my heart still wants you.<br>
 
-      Patawarin mo sana ako at minahal kita sa paraang alam ko...
-      at hindi sa paraang gusto mo.
-    </p>
+  Patawarin mo sana ako at minahal kita sa paraang alam ko...
+  at hindi sa paraang gusto mo.
+</p>
 
     <div class="btn">
       <a href="new3.html">...</a>
@@ -119,4 +116,3 @@
 </body>
 
 </html>
-```
