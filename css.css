@@ -1,146 +1,228 @@
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bossing mahal talaga kita sensya na</title>
 
-body {
-  width: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #b784a7;
-  overflow-x: hidden;
-}
+  <link rel="stylesheet" href="./css.css" />
 
-.middle {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
-  text-align: center;
-}
+  <style>
+    #love-page,
+    #love-page * {
+      box-sizing: border-box;
+    }
 
-.top-left-gif {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  width: min(400px, 30vw);
-  max-height: 30dvh;
-  height: auto;
-  object-fit: contain;
-  object-position: top left;
-  z-index: 0;
-}
+    body:has(#love-page) {
+      display: block;
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      margin: 0;
+      padding: 0;
+      background: #b383a7;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
 
-.bottom-right-gif {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: min(450px, 30vw);
-  max-height: 30dvh;
-  height: auto;
-  object-fit: contain;
-  object-position: bottom right;
-  z-index: 0;
-}
+    #love-page {
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #281b26;
+    }
 
-.btn {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 30px;
-}
+    #love-page .love-gallery {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      width: 100%;
+      max-width: 600px;
+    }
 
-.btn a {
-  display: inline-block;
-  text-decoration: none;
-  color: #111;
-  background: #fff;
-  padding: 10px 25px;
-  border-radius: 66px;
-  box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
+    #love-page .love-photo {
+      position: static;
+      display: block;
+      width: 100%;
+      max-width: none;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 14px;
+      transform: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+    }
 
-.btn a:hover {
-  transform: translateY(-5px) scale(1.05);
-  background-color: #f3d9e8;
-}
+    #love-page .love-card {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      text-align: center;
+      background: rgba(255, 240, 249, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
 
-.responsive-media {
-  display: block;
-  width: 100%;
-  max-width: 768px;
-  height: auto;
-  object-fit: contain;
-}
+    #love-page .love-gif {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      max-height: 350px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      transform: none;
+    }
 
-img,
-.gif-container {
-  max-width: 100%;
-  height: auto;
-}
+    #love-page .love-title {
+      width: 100%;
+      margin: 0;
+      font-size: clamp(24px, 4vw, 34px);
+      line-height: 1.3;
+      overflow-wrap: anywhere;
+    }
 
-@media screen and (max-width: 768px) {
-  body {
-    padding: 16px 12px;
-  }
+    #love-page .love-message {
+      width: 100%;
+      max-width: 500px;
+      margin: 0;
+      font-size: clamp(15px, 2.5vw, 18px);
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
 
-  .middle {
-    padding: 0;
-    margin-top: 22dvh;
-    margin-bottom: 22dvh;
-  }
+    #love-page .love-button-wrap {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 4px;
+    }
 
-  .top-left-gif {
-    top: 12px;
-    left: 12px;
-    width: 32vw;
-    max-width: 150px;
-    max-height: 18dvh;
-  }
+    #love-page .love-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 120px;
+      min-height: 46px;
+      padding: 12px 28px;
+      background: #fff;
+      color: #633e59;
+      border: 1px solid #e7c9dd;
+      border-radius: 66px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+      font-size: 17px;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-  .bottom-right-gif {
-    bottom: 12px;
-    right: 12px;
-    width: 34vw;
-    max-width: 160px;
-    max-height: 18dvh;
-  }
+    #love-page .love-button:hover {
+      background: #f3d9e8;
+    }
 
-  .btn {
-    gap: 12px;
-    margin-top: 20px;
-  }
+    @media (max-width: 600px) {
+      #love-page {
+        padding: 16px 12px 28px;
+        gap: 18px;
+      }
 
-  .btn a {
-    padding: 10px 22px;
-    font-size: 16px;
-  }
-}
+      #love-page .love-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        max-width: 440px;
+      }
 
-@media screen and (max-height: 600px) {
-  body {
-    align-items: flex-start;
-  }
+      #love-page .love-photo {
+        aspect-ratio: 4 / 5;
+      }
 
-  .middle {
-    margin-top: 24dvh;
-    margin-bottom: 24dvh;
-  }
+      #love-page .love-card {
+        max-width: 440px;
+        padding: 22px 16px;
+        gap: 16px;
+        border-radius: 18px;
+      }
 
-  .top-left-gif {
-    max-height: 16dvh;
-  }
+      #love-page .love-gif {
+        max-width: 260px;
+        max-height: 300px;
+      }
 
-  .bottom-right-gif {
-    max-height: 16dvh;
-  }
-}
+      #love-page .love-title {
+        font-size: clamp(23px, 7vw, 30px);
+      }
+
+      #love-page .love-message {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+    }
+
+    @media (max-width: 350px) {
+      #love-page {
+        padding: 12px 8px 22px;
+      }
+
+      #love-page .love-gallery {
+        gap: 8px;
+      }
+
+      #love-page .love-card {
+        padding: 20px 12px;
+      }
+
+      #love-page .love-message {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main id="love-page">
+
+    <div class="love-gallery">
+      <img class="love-photo" src="ganda4.jpg" alt="Favorite photo 1" />
+      <img class="love-photo" src="ganda5.jpg" alt="Favorite photo 2" />
+      <img class="love-photo" src="us4.jpg" alt="Photo of us 1" />
+      <img class="love-photo" src="us 1.jpg" alt="Photo of us 2" />
+      <img class="love-photo" src="ganda2.jpg" alt="Favorite photo 3" />
+    </div>
+
+    <section class="love-card">
+      <img class="love-gif" src="gif7.gif" alt="Our special GIF" />
+
+      <h1 class="love-title">Well ayoko ng pahabain</h1>
+
+      <p class="love-message">
+        Thank you for the nonstop love you gave me. Thanks kasi
+        akala ko wala talaga akong chance non eh hahaha.
+        It's great to love you, pero wala...
+        Yeah, I hope napatunayan ko na mahirap hindi sukuan
+        at palitan. Mahirap kang sukuang ipaglaban.
+        At mahal na mahal kita.
+      </p>
+
+      <div class="love-button-wrap">
+        <a class="love-button" href="oh.html">oh..</a>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
