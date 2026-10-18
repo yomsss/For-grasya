@@ -4,20 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hi grasya worldwide:></title>
+  <title>Hi grasya worldwide :&gt;</title>
 
   <link rel="stylesheet" href="./css.css" />
 
   <style>
     body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      margin: 0;
     }
 
     .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      box-sizing: border-box;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -25,18 +32,24 @@
       gap: 15px;
     }
 
-    /* Make the GIF 300px wide */
     .tenor-gif-embed {
       width: 300px !important;
-      max-width: 300px !important;
+      max-width: 100% !important;
     }
 
-    h1 {
-      margin: 0;
-    }
-
+    h1,
     p {
       margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 12px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
@@ -45,12 +58,12 @@
 
   <div class="container">
 
-    <!-- GIF -->
-    <div class="tenor-gif-embed"
+    <div
+      class="tenor-gif-embed"
       data-postid="22885016"
       data-share-method="host"
       data-aspect-ratio="1.04918"
-      data-width="300px">
+      data-width="300">
 
       <a href="https://tenor.com/view/manja-gif-22885016">
         Manja Sticker
@@ -59,17 +72,12 @@
       <a href="https://tenor.com/search/manja-stickers">
         Manja Stickers
       </a>
-
     </div>
 
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
-    <!-- Text below GIF -->
     <h1>Do you want ba na tumigil na me? 🫠</h1>
 
     <p>haha</p>
 
-    <!-- Buttons -->
     <div class="btn">
       <a href="yes1.html">Yes</a>
       <a href="no.html">No</a>
@@ -77,8 +85,8 @@
 
   </div>
 
-  <script src="js/js.js"></script>
+  <script async src="https://tenor.com/embed.js"></script>
+  <script src="./js/js.js"></script>
 
 </body>
-
 </html>
