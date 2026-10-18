@@ -143,3 +143,14 @@ img,
     max-height: 16dvh;
   }
 }
+
+.container img.main-gif {
+  width: min(260px, 65vw);
+  height: auto;
+  max-height: 55dvh;
+  display: block;
+  object-fit: contain;
+  transform: rotate(90deg);
+
+  margin: 60px auto;
+}
