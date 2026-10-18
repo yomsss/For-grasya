@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Ouch me grasya worldwide :(</title>
 
   <link rel="stylesheet" href="./css.css" />
@@ -34,19 +36,18 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .container img {
       display: block;
 
-      /* Responsive image sizing */
-      width: 100%;
-      max-width: 300px;
-      max-height: 45vh;
+      width: auto;
+      height: auto;
+
+      max-width: 100%;
       max-height: 45dvh;
 
-      height: auto;
       object-fit: contain;
       flex-shrink: 1;
     }
@@ -55,7 +56,7 @@
       margin: 0;
       max-width: 100%;
       font-size: clamp(22px, 5vw, 32px);
-      overflow-wrap: break-word;
+      overflow-wrap: anywhere;
     }
 
     p {
@@ -64,7 +65,7 @@
     }
 
     .btn {
-      margin-top: 25px;
+      margin-top: 15px;
       display: flex;
       justify-content: center;
     }
@@ -84,41 +85,53 @@
       background-color: #eeeeee;
     }
 
-    @media (max-height: 600px) {
+    @media screen and (max-width: 600px) {
+      body {
+        padding: 16px;
+      }
+
+      .container {
+        gap: 10px;
+      }
+
+      .container img {
+        max-width: 100%;
+        max-height: 40dvh;
+      }
+
+      h1 {
+        font-size: clamp(22px, 6vw, 28px);
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .btn {
+        margin-top: 12px;
+      }
+    }
+
+    @media screen and (max-height: 600px) {
       body {
         align-items: flex-start;
       }
 
       .container img {
-        max-height: 35vh;
-        max-height: 35dvh;
+        max-height: 30dvh;
       }
 
       .btn {
-        margin-top: 12px;
-
-      .responsive-media {
-        width: 768px;
-        height: auto;
-        display: block;
-      }
-      
-      @media screen and (max-width: 768px) {
-        .responsive-media {
-          width: 100%;
-          max-width: 100%;
-        }
-        
+        margin-top: 8px;
       }
     }
   </style>
 </head>
 
 <body>
-
   <div class="container">
 
-    <img src="gif5.gif" alt="GIF">
+    <img src="gif5.gif" alt="GIF" />
 
     <h1>Well, I guess hanggang dito nalang talaga huh?..</h1>
 
@@ -129,7 +142,6 @@
     </div>
 
   </div>
-
 </body>
 
 </html>
