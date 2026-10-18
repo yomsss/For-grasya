@@ -84,45 +84,55 @@
     .btn a:hover {
       background-color: #eeeeee;
     }
-
-    @media screen and (max-width: 600px) {
-      body {
-        padding: 16px;
-      }
-
-      .container {
-        gap: 10px;
-      }
-
-      .container img {
-        max-width: 100%;
-        max-height: 40dvh;
-      }
-
-      h1 {
-        font-size: clamp(22px, 6vw, 28px);
-      }
-
-      p {
-        font-size: 16px;
-      }
-
-      .btn {
-        margin-top: 12px;
-      }
+    
+     .top-left-gif {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 400px;
+      max-width: calc(100vw - 40px);
+      height: auto;
+      max-height: 35dvh;
+      object-fit: contain;
+      object-position: top left;
     }
-
-    @media screen and (max-height: 600px) {
-      body {
-        align-items: flex-start;
+    
+    .bottom-right-gif {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 450px;
+      max-width: calc(100vw - 40px);
+      height: auto;
+      max-height: 35dvh;
+      object-fit: contain;
+      object-position: bottom right;
+    }
+    
+    .middle {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .top-left-gif {
+        top: 20px;
+        left: 20px;
+        width: 32vw;
+        max-width: 150px;
+        max-height: 20dvh;
       }
-
-      .container img {
-        max-height: 30dvh;
-      }
-
-      .btn {
-        margin-top: 8px;
+    
+      .bottom-right-gif {
+        bottom: 20px;
+        right: 20px;
+        width: 32vw;
+        max-width: 150px;
+        max-height: 20dvh;
       }
     }
   </style>
