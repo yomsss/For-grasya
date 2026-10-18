@@ -1,3 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bossing mahal talaga kita sensya na</title>
+
+  <link rel="stylesheet" href="./css.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      padding: 24px;
+      background: #b383a7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: auto;
+      font-family: Arial, sans-serif;
+      color: #30212e;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      min-height: 520px;
+      padding: clamp(24px, 4vw, 55px);
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      align-items: center;
+      gap: clamp(25px, 4vw, 60px);
+      background: #fceaf4;
+      border-radius: 32px;
+      box-shadow: 0 20px 50px rgba(65, 28, 57, 0.16);
+      position: relative;
+      z-index: 10;
+    }
+
+    .main-gif {
+      width: 100%;
+      max-width: 350px;
+      max-height: 430px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(65, 28, 57, 0.15);
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-width: 0;
+    }
+
+    h1 {
+      margin: 0 0 22px;
+      font-size: clamp(27px, 3.2vw, 44px);
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+    }
+
+    p {
+      margin: 0;
+      font-size: clamp(16px, 1.7vw, 21px);
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    .btn {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn a {
+      min-width: 150px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 35px;
+      border-radius: 50px;
+      border: 1px solid #edc7df;
+      background: white;
+      color: #704766;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 12px 28px rgba(77, 39, 67, 0.13);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .btn a:hover {
+      background: #fff5fb;
+      transform: translateY(-3px);
+    }
+
+    .extra-img {
+      position: fixed;
+      display: block;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 16px;
+      z-index: 1;
+      opacity: 0.95;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+      pointer-events: none;
+    }
+
+    .img1 {
+      width: clamp(90px, 10vw, 145px);
+      top: 3%;
+      left: 3%;
+      transform: rotate(-12deg);
+    }
+
+    .img2 {
+      width: clamp(130px, 15vw, 205px);
+      top: 3%;
+      right: 3%;
+      transform: rotate(10deg);
+    }
+
+    .img3 {
+      width: clamp(110px, 12vw, 165px);
+      bottom: 3%;
+      left: 4%;
+      transform: rotate(12deg);
+    }
+
+    .img4 {
+      width: clamp(140px, 16vw, 215px);
+      bottom: 3%;
+      right: 3%;
+      transform: rotate(-10deg);
+    }
+
+    .img5 {
+      width: clamp(75px, 8vw, 110px);
+      top: 48%;
+      left: 1%;
+      transform: rotate(-7deg);
+    }
+
+    @media (max-width: 800px) {
+      body {
+        padding: 18px;
+      }
+
+      .container {
+        min-height: 430px;
+        padding: 28px;
+        gap: 24px;
+        grid-template-columns: 0.8fr 1.2fr;
+      }
+
+      .main-gif {
+        max-height: 340px;
+      }
+
+      h1 {
+        font-size: clamp(24px, 4vw, 32px);
+      }
+
+      p {
+        font-size: clamp(15px, 2.2vw, 18px);
+      }
+
+      .img5 {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 14px 10px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 440px;
+        min-height: auto;
+        padding: 28px 20px;
+        grid-template-columns: 1fr;
+        gap: 22px;
+        border-radius: 26px;
+      }
+
+      .main-gif {
+        width: min(220px, 65vw);
+        max-height: 270px;
+        aspect-ratio: 3 / 4;
+      }
+
+      h1 {
+        margin-bottom: 14px;
+        font-size: clamp(25px, 7vw, 34px);
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .btn {
+        margin-top: 24px;
+      }
+
+      .btn a {
+        padding: 12px 30px;
+      }
+
+      .img1 {
+        width: 22vw;
+        top: 2%;
+        left: 1%;
+      }
+
+      .img2 {
+        width: 27vw;
+        top: 3%;
+        right: 1%;
+      }
+
+      .img3 {
+        width: 23vw;
+        bottom: 2%;
+        left: 1%;
+      }
+
+      .img4 {
+        width: 28vw;
+        bottom: 2%;
+        right: 1%;
+      }
+    }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+      body {
+        padding: 12px;
+      }
+
+      .container {
+        max-width: 1000px;
+        min-height: 0;
+        padding: 20px 35px;
+        grid-template-columns: 0.65fr 1.35fr;
+        gap: 30px;
+      }
+
+      .main-gif {
+        width: auto;
+        height: 55vh;
+        max-height: 300px;
+        aspect-ratio: 3 / 4;
+      }
+
+      h1 {
+        font-size: clamp(23px, 4vh, 32px);
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: clamp(13px, 2.8vh, 17px);
+        line-height: 1.5;
+      }
+
+      .btn {
+        margin-top: 14px;
+      }
+
+      .btn a {
+        padding: 9px 25px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <img class="extra-img img1" src="kulitan2.jpg" alt="">
+  <img class="extra-img img2" src="wholesome1.jpg" alt="">
+  <img class="extra-img img3" src="kulitan3.jpg" alt="">
+  <img class="extra-img img4" src="kulitan1.jpg" alt="">
+  <img class="extra-img img5" src="wholesome2.jpg" alt="">
+
+  <main class="container">
+    <img
+      class="main-gif"
+      src="gif6.gif"
+      alt="Our special moment"
+    >
+
+    <div class="content">
+      <h1>Part of my life na kasama kita.</h1>
+
+      <p>
+        Mahal na mahal kita. Thank you for being part of my life.
+        Sana alam mo kung gaano kita kamahal. Ikaw pa rin,
+        palagi. ❤️
+      </p>
+
+      <div class="btn">
+        <a href="new 1.html">...</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 
