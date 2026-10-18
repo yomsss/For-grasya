@@ -84,7 +84,6 @@
       background-color: #eeeeee;
     }
 
-    /* Adjust for shorter mobile screens */
     @media (max-height: 600px) {
       body {
         align-items: flex-start;
@@ -97,6 +96,19 @@
 
       .btn {
         margin-top: 12px;
+
+      .responsive-media {
+        width: 768px;
+        height: auto;
+        display: block;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .responsive-media {
+          width: 100%;
+          max-width: 100%;
+        }
+        
       }
     }
   </style>
