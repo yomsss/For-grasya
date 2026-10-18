@@ -12,16 +12,13 @@ body {
   justify-content: center;
   align-items: center;
 
-  /* Mauve background */
   background-color: #b784a7;
 }
 
-/* Middle content */
 .middle {
   text-align: center;
 }
 
-/* Top-left GIF */
 .top-left-gif {
   position: absolute;
   top: 20px;
@@ -29,7 +26,6 @@ body {
   width: 400px;
 }
 
-/* Bottom-right GIF */
 .bottom-right-gif {
   position: absolute;
   bottom: 20px;
@@ -37,7 +33,6 @@ body {
   width: 450px;
 }
 
-/* Buttons */
 .btn {
   display: flex;
   gap: 25px;
@@ -52,12 +47,30 @@ body {
   border-radius: 66px;
   box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
 
-  /* Smooth movement */
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Move button when mouse hovers */
 .btn a:hover {
   transform: translateY(-8px) scale(1.1);
   background-color: #f3d9e8;
 }
+
+
+.responsive-media {
+  width: 768px;
+  height: auto;
+  display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+  .responsive-media {
+    width: 100%;
+    max-width: 100%;
+  }
+}   
+
+img, .gif-container {
+  max-width: 100%;
+  height: auto;
+}   
